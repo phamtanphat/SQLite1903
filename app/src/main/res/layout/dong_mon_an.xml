@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#f20"
+        android:textSize="28sp"
+        android:id="@+id/textviewTenmonan"
+        android:text="Ten mon an"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/textviewTenmonan"
+        android:layout_margin="5dp"
+        android:textStyle="italic"
+        android:textColor="#4ba697"
+        android:textSize="28sp"
+        android:id="@+id/textviewGiamonan"
+        android:text="Gia mon an"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

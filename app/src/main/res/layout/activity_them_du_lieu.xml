@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ptp.phamtanphat.sqlite1903.ThemDuLieuActivity">
+
+    <TextView
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#f20"
+        android:textSize="40sp"
+        android:text="Them du lieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:textColorHint="#868585"
+        android:layout_marginTop="50dp"
+        android:hint="Ten mon an"
+        android:id="@+id/edittextTenmonan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:textColorHint="#868585"
+        android:layout_marginTop="50dp"
+        android:hint="Gia mon an"
+        android:id="@+id/edittextGiamonan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Them"
+        android:id="@+id/buttonThem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
