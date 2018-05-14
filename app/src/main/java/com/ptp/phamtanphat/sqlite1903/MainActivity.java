@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -51,4 +52,10 @@ public class MainActivity extends AppCompatActivity {
 //        sqLite.QueryData("INSERT INTO Monan VALUES(null,'Hu tieu',30000)");
 //        sqLite.QueryData("INSERT INTO Monan VALUES(null,'Banh xeo',15000)");
 //    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_them,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 }
