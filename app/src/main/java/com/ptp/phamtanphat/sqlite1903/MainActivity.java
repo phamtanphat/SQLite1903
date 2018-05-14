@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public static SQLite sqLite;
     MonanAdapter monanAdapter;
     ListView listViewMonan;
-    ArrayList<Monan> monanArrayList;
+    ArrayList<Monan> monanArrayList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void GetData() {
-        monanArrayList = new ArrayList<>();
+        monanArrayList.clear();
         monanAdapter = new MonanAdapter(this,android.R.layout.simple_list_item_1,monanArrayList);
         listViewMonan.setAdapter(monanAdapter);
         Cursor cursor = sqLite.GetData("SELECT * FROM Monan");
@@ -68,7 +68,12 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,ThemDuLieuActivity.class);
                 startActivity(intent);
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onRestart() {
+        GetData();
+        super.onRestart();
     }
 }
